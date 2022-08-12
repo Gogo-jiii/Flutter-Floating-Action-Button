@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -36,7 +37,46 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(),
+      body: const Center(
+        child: Text("Hello world!"),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
+        child: const Icon(Icons.add),
+        onPressed: () {
+          if (kDebugMode) {
+            print("FAB clicked");
+          }
+        },
+      ),
+      // floatingActionButton: FloatingActionButton.extended(
+      //   backgroundColor: Colors.green,
+      //   icon: const Icon(Icons.add),
+      //   onPressed: () {
+      //     if (kDebugMode) {
+      //       print("FAB clicked");
+      //     }
+      //   },
+      //   label: const Text("Add"),
+      // ),
+      // floatingActionButton: FloatingActionButton.large(
+      //   backgroundColor: Colors.green,
+      //   child: const Icon(Icons.add),
+      //   onPressed: () {
+      //     if (kDebugMode) {
+      //       print("FAB clicked");
+      //     }
+      //   },
+      // ),
+      // floatingActionButton: FloatingActionButton.small(
+      //   backgroundColor: Colors.green,
+      //   child: const Icon(Icons.add),
+      //   onPressed: () {
+      //     if (kDebugMode) {
+      //       print("FAB clicked");
+      //     }
+      //   },
+      // ),
     );
   }
 }
